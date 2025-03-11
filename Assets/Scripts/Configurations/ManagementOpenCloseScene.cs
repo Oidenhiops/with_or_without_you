@@ -64,13 +64,10 @@ public class ManagementOpenCloseScene : MonoBehaviour
     {
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
-            if (SceneManager.GetSceneAt(i).name == "GameScene")
-            {
-                Character character = FindAnyObjectByType<Character>();
-                character.characterInfo.isActive = true;
-                character.GetComponent<Rigidbody>().isKinematic = false;
-                break;
-            }
+            Character character = FindAnyObjectByType<Character>();
+            character.characterInfo.isActive = true;
+            character.GetComponent<Rigidbody>().isKinematic = false;
+            break;
         }
     }
     public enum TypeScene
