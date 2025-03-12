@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManagerHelper : MonoBehaviour
 {
     [NonSerialized] public GameManager gameManager;
+    public AudioSource bgMusic;
     void Start()
     {
         gameManager = GameObject.FindWithTag("InformationBetweenScenes").GetComponent<GameManager>();    
@@ -28,5 +29,11 @@ public class GameManagerHelper : MonoBehaviour
     public void SetAudioMixerData()
     {
         gameManager.SetAudioMixerData();
+    }
+    public void ChangeBGMusic(AudioClip audioClip)
+    {
+        bgMusic.Stop();
+        bgMusic.clip = audioClip;
+        bgMusic.Play();
     }
 }

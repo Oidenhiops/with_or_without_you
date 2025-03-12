@@ -8,7 +8,7 @@ public class ManagementCharacterAttack : MonoBehaviour, Character.ICharacterAtta
     ManagementCharacterModelDirection.ICharacterDirection characterDirection;
     Character.ICharacterAnimations characterAnimations;
     float distAttack = 1;
-    float distLostTarget = 1;
+    public float distLostTarget = 1;
     float cooldownAttack = 0;
     Character.Statistics costsAttack = new Character.Statistics(Character.TypeStatistics.Sp, 3, 0, 0, 0, 0);
     void Start()

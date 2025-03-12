@@ -85,4 +85,9 @@ public class ManagementPlayerMovement : MonoBehaviour, Character.ICharacterMove
             Gizmos.DrawWireCube(center + Vector3.down * rayDistance, sizeCheckIsGrounded);
         }
     }
+
+    public void SetPositionTarget(Transform position){}
+    public void SetCanMoveState(bool state){}
+
+    public void SetTarget(Transform targetPos){}
 }

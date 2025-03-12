@@ -1,24 +1,44 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PathFollowNM : MonoBehaviour
+public class PathFollowNM : MonoBehaviour, Character.ICharacterMove
 {
+    public Character character;
     [SerializeField] NavMeshAgent na;
-    [SerializeField] GameObject target;
+    [SerializeField] Transform target;
     public bool canMove = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         na = GetComponent<NavMeshAgent>();
         na.updateRotation = false;
+        na.isStopped = true;
+        na.enabled = false;
+        character.characterInfo.isActive = true;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        if (canMove && target != null)
         {
-            na.SetDestination(target.transform.position);
+            na.SetDestination(target.position);
         }
+    }
+    public Rigidbody GetRigidbody()
+    {
+        return null;
+    }
+    public void SetPositionTarget(Transform position)
+    {
+        target = position;
+    }
+    public void SetCanMoveState(bool state)
+    {
+        na.enabled = state;
+        canMove = state;
+        na.isStopped = !state;
+    }
+    public void Move(){}
+    public void SetTarget(Transform targetPos)
+    {
+        target = targetPos;        
     }
 }

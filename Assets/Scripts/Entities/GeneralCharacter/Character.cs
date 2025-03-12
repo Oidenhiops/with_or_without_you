@@ -127,6 +127,10 @@ public class Character : MonoBehaviour
     {
         if (characterInfo.isPlayer && characterInfo.managementPlayerCamera) characterInfo.managementPlayerCamera.MoveCamera();
     }
+    void ReloadScene()
+    {
+        FindAnyObjectByType<GameManager>().ChangeSceneSelector(GameManager.TypeScene.HomeScene);
+    }
     [Serializable] public class CharacterInfo
     {
         #region characterScripts
@@ -388,6 +392,9 @@ public class Character : MonoBehaviour
     {
         public void Move();
         public Rigidbody GetRigidbody();
+        public void SetPositionTarget(Transform position);
+        public void SetCanMoveState(bool state);
+        public void SetTarget(Transform targetPos);
     }
     public interface ICharacterAnimations
     {
