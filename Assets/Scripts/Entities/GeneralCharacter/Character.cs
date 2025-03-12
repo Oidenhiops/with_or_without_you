@@ -127,6 +127,10 @@ public class Character : MonoBehaviour
     {
         if (characterInfo.isPlayer && characterInfo.managementPlayerCamera) characterInfo.managementPlayerCamera.MoveCamera();
     }
+    void ReloadScene()
+    {
+        FindAnyObjectByType<GameManager>().ChangeSceneSelector(GameManager.TypeScene.HomeScene);
+    }
     [Serializable] public class CharacterInfo
     {
         #region characterScripts

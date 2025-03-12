@@ -4168,6 +4168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 3267473307002927260}
   posisionAttack: {fileID: 8850783917978919298}
+  distLostTarget: 1
 --- !u!114 &2849091386784508898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9389,7 +9390,6 @@ MonoBehaviour:
     characterRigth: {fileID: 0}
     changeCharacterPositionRigth: {fileID: 0}
     bg: {fileID: 0}
-  isActiveDialog: 0
   currentDialogIndex: 0
 --- !u!1 &5351969638902197233
 GameObject:
