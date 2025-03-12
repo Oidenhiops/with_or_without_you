@@ -1,17 +1,17 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "InitialData", menuName = "ScriptableObjects/InitialDataScriptableObject", order = 1)]
-public class InitialDataScriptableOject : ScriptableObject
+[CreateAssetMenu(fileName = "InitialData", menuName = "ScriptableObjects/Character/InitialDataSO", order = 1)]
+public class InitialDataSO : ScriptableObject
 {
     public Texture2D atlas;
     public Character.CharacterInfo characterInfo = new Character.CharacterInfo();
     public ManagementCharacterSkills.SkillInfo baseSkill;
     public ManagementCharacterObjects.ObjectsInfo[] objects = new ManagementCharacterObjects.ObjectsInfo[0];
-    public CharacterAnimationsInfoScriptableObject characterAnimations;
-    public CharacterSoundsScriptableObjec characterSounds;
-    public InitialDataScriptableOject Clone()
+    public CharacterAnimationsSO characterAnimations;
+    public CharacterSoundsSO characterSounds;
+    public InitialDataSO Clone()
     {
-        InitialDataScriptableOject clone = ScriptableObject.CreateInstance<InitialDataScriptableOject>();
+        InitialDataSO clone = ScriptableObject.CreateInstance<InitialDataSO>();
 
         clone.atlas = this.atlas;
         clone.characterInfo = this.characterInfo;

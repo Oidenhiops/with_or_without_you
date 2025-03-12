@@ -9,14 +9,14 @@ public class ManagementSpawn : MonoBehaviour
     public List<ManagementSpawnPosition> spawnPositions;
     public int amountSpawns = 5;
     public List<GameObject> currentEnemies = new List<GameObject>();
-    public InitialDataScriptableOject[] characters;
+    public InitialDataSO[] characters;
     [SerializeField] GameObject characterRef;
     [SerializeField] GameObject spawnPositionRef;
     [SerializeField] SpawnTimeInfo[] spawnInfo;
     [SerializeField] int currentSpawn;
     void Start()
     {
-        characters = Resources.LoadAll<InitialDataScriptableOject>("SciptablesObjects/InitialData");
+        characters = Resources.LoadAll<InitialDataSO>("SciptablesObjects/Character/InitialData");
     }
     public void SetSpawnPositions()
     {
@@ -54,7 +54,7 @@ public class ManagementSpawn : MonoBehaviour
     {
         return spawnPositions[Random.Range(0, spawnPositions.Count)].positionSpawn.transform.position;
     }
-    InitialDataScriptableOject GetCharacterInitialData()
+    InitialDataSO GetCharacterInitialData()
     {
         return characters[Random.Range(0, characters.Length)].Clone();
     }

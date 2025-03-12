@@ -8,9 +8,9 @@ public class ManagementCharacterInstance : MonoBehaviour, ManagementCharacterAni
     public MeshRenderer meshRenderer;
     public Mesh originalMesh;
     public bool needSpritePerTime = false;
-    public CharacterAnimationsInfoScriptableObject.AnimationsInfo objectInstanceAnimation;
-    public CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo objectInstanceAnimationInfo;
-    public void SetInfoForAnimation(Vector2 movement, CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo characterAnimationsInfo)
+    public CharacterAnimationsSO.AnimationsInfo objectInstanceAnimation;
+    public CharacterAnimationsSO.CharacterAnimationsInfo objectInstanceAnimationInfo;
+    public void SetInfoForAnimation(Vector2 movement, CharacterAnimationsSO.CharacterAnimationsInfo characterAnimationsInfo)
     {
         if (needSpritePerTime)
         {

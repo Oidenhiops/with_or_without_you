@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "CharacterSounds", menuName = "ScriptableObjects/CharacterSoundsScriptableObject", order = 1)]
-public class CharacterSoundsScriptableObjec : ScriptableObject
+[CreateAssetMenu(fileName = "CharacterSounds", menuName = "ScriptableObjects/Character/CharacterSoundsSO", order = 1)]
+public class CharacterSoundsSO : ScriptableObject
 {
     public SoundsInfo[] sounds;
     [System.Serializable]

@@ -10,7 +10,7 @@ public class SkillDataScriptableObject : ScriptableObject
     public bool isPorcent = false;
     public bool isFromBaseValue = false;
     public bool needAnimation = false;
-    public CharacterAnimationsInfoScriptableObject.AnimationsInfo skillAnimation = new CharacterAnimationsInfoScriptableObject.AnimationsInfo();
+    public CharacterAnimationsSO.AnimationsInfo skillAnimation = new CharacterAnimationsSO.AnimationsInfo();
     public CdInfo cdInfo = new CdInfo();
     [System.Serializable]
     public class CdInfo

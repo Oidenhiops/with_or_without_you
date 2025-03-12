@@ -29,6 +29,12 @@ public class Character : MonoBehaviour
     {
         InitializeCharacter();
     }
+    [NaughtyAttributes.Button]
+    void ActivePlayer()
+    {
+        characterInfo.characterMove.GetRigidbody().isKinematic = false;
+        characterInfo.isActive = true;
+    }
     void Update()
     {
         if (characterInfo.isInitialize) HandleHud();
@@ -137,7 +143,7 @@ public class Character : MonoBehaviour
         [HideInInspector] public ICharacterMove characterMove;
         [HideInInspector] public MonoBehaviour owner;
         #endregion
-        public InitialDataScriptableOject initialData;
+        public InitialDataSO initialData;
         public Coroutine hitStop;
         public Coroutine regenerateResources;
         public bool isPlayer = false;
@@ -230,7 +236,7 @@ public class Character : MonoBehaviour
                     Die();
                 }
                 characterAnimations.MakeAnimation(ManagementCharacterAnimations.TypeAnimation.TakeDamage);
-                PlayASound(CharacterSoundsScriptableObjec.TypeSound.TakeDamage, true);
+                PlayASound(CharacterSoundsSO.TypeSound.TakeDamage, true);
             }
         }
         float CalculateDamage(float damage, TypeDamage typeDamage)
@@ -245,14 +251,14 @@ public class Character : MonoBehaviour
         }
         void Die()
         {
-            PlayASound(CharacterSoundsScriptableObjec.TypeSound.Die, true);
+            PlayASound(CharacterSoundsSO.TypeSound.Die, true);
             isActive = false;
             characterObject.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
             characterObject.GetComponent<Rigidbody>().isKinematic = true;
             characterObject.GetComponent<Collider>().enabled = false;
             if (isPlayer)
             {
-                owner.Invoke("ReloadScene", managementCharacterSounds.GetAudioClip(CharacterSoundsScriptableObjec.TypeSound.Die).length + 1);
+                owner.Invoke("ReloadScene", managementCharacterSounds.GetAudioClip(CharacterSoundsSO.TypeSound.Die).length + 1);
             }
             else
             {
@@ -266,7 +272,7 @@ public class Character : MonoBehaviour
             var mainModule = particleSystem.main;
             mainModule.startColor = colorBlood;
         }
-        public void PlayASound(CharacterSoundsScriptableObjec.TypeSound typeSound, bool randomPitch)
+        public void PlayASound(CharacterSoundsSO.TypeSound typeSound, bool randomPitch)
         {
             GameObject blockSound = Instantiate(Resources.Load<GameObject>("Prefabs/Effects/BlockSound/BlockSound"));
             AudioClip audioClip = managementCharacterSounds.GetAudioClip(typeSound);
@@ -385,12 +391,12 @@ public class Character : MonoBehaviour
     }
     public interface ICharacterAnimations
     {
-        public void SetInitialData(InitialDataScriptableOject animationsInfo);
+        public void SetInitialData(InitialDataSO animationsInfo);
         public bool ValidateAnimationEnd(ManagementCharacterAnimations.TypeAnimation typeAnimation);
         public void MakeAnimation(ManagementCharacterAnimations.TypeAnimation typeAnimation);
         public GameObject GetCharacterSprite();
-        public CharacterAnimationsInfoScriptableObject.AnimationsInfo GetAnimation(ManagementCharacterAnimations.TypeAnimation typeAnimation);
-        public CharacterAnimationsInfoScriptableObject.AnimationsInfo GetCurrentAnimation();
-        public CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo GetAnimationsInfo();
+        public CharacterAnimationsSO.AnimationsInfo GetAnimation(ManagementCharacterAnimations.TypeAnimation typeAnimation);
+        public CharacterAnimationsSO.AnimationsInfo GetCurrentAnimation();
+        public CharacterAnimationsSO.CharacterAnimationsInfo GetAnimationsInfo();
     }
 }

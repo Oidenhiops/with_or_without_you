@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   managementData: {fileID: 3510654118116221047}
-  OpenCloseScene: {fileID: 4463745145349488108}
+  OpenCloseScene: {fileID: 6331346966512938124}
 --- !u!1 &793226836195673349
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +548,7 @@ MonoBehaviour:
   gameManager: {fileID: 7533425733039875961}
   openCloseSceneAnimator: {fileID: 4463745145349488108}
   openCloseSceneLoader: {fileID: 4971188373492604548}
-  auto: 0
+  auto: 1
 --- !u!1 &8026220719031658255
 GameObject:
   m_ObjectHideFlags: 0
