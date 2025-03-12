@@ -140,7 +140,7 @@ MonoBehaviour:
   typeKey: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 524288
+    m_Bits: 4718592
   unlockClip: {fileID: 8300000, guid: 6d59c9fa98d426d4b9816607c4ee035d, type: 3}
   noUnlockClip: {fileID: 8300000, guid: cf46efcaf92572247b979b7aa3d4f92d, type: 3}
 --- !u!1 &8284346663306017821

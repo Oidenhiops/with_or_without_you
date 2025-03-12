@@ -27,7 +27,7 @@ TagManager:
   - MapObstacle
   - InitialAttack
   - Decal
-  - Chest
+  - NeedKey
   - Grass
   - Decoration
   - 

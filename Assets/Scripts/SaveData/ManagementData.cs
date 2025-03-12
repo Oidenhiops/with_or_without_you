@@ -90,7 +90,7 @@ public class ManagementData : MonoBehaviour
     void SetStartingPlayerData(SaveDataInfo dataInfo)
     {
         CharacterInfo newCharacterInfo = new CharacterInfo();
-        newCharacterInfo.characterSelectedName = "Warrior";
+        newCharacterInfo.characterSelectedName = "Drake";
         dataInfo.gameInfo.characterInfo = newCharacterInfo;
     }
     void SetStartingDataSound(SaveDataInfo dataInfo)

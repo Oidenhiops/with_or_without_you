@@ -20,7 +20,8 @@ public class ChangeCharacterMenu : MonoBehaviour
 
     public void OnEnable()
     {
-        allCharacters = Resources.LoadAll<InitialDataSO>("SciptablesObjects/Character/InitialData");
+        InitialDataSO drake = Resources.Load<InitialDataSO>("SciptablesObjects/Character/InitialData/Drake");
+        allCharacters = new InitialDataSO[]{drake};
         characterSelected = ManagementData.saveData.gameInfo.characterInfo.characterSelected;
         ManagementData.saveData.gameInfo.characterInfo.currentSkills[0] = characterSelected.baseSkill;
         for (int i = 0; i < allCharacters.Length; i++)

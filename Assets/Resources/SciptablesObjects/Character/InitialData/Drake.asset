@@ -124,7 +124,12 @@ MonoBehaviour:
     cdInfo:
       cd: 0
       currentCD: 0
-  objects: []
+  objects:
+  - objectData: {fileID: 0}
+    amount: 1
+    isUsingItem: 0
+    id: 0
+    objectInstance: {fileID: 0}
   characterAnimations: {fileID: 11400000, guid: 8a319a2db955846459a1f9926ce8eebc,
     type: 2}
   characterSounds: {fileID: 11400000, guid: 106938f6984de574b85f32e5a78276c8, type: 2}

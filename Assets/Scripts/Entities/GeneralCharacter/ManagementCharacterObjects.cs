@@ -149,7 +149,7 @@ public class ManagementCharacterObjects : MonoBehaviour
             {
                 int amountToAdd = ValidateAmountObjectToAdd(objectForValidate, objectTaked);
                 objectForValidate.amount += amountToAdd;
-                character.characterInfo.managementCharacterHud.SendInformationMessage($"{ManagementData.GetDialog(12, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())} {amountToAdd} {ManagementData.GetDialog(objectTaked.objectInfo.objectData.IDText, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())}", Color.green);
+                character.characterInfo.managementCharacterHud.SendInformationMessage($"{ManagementData.GetDialog(18, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())} {amountToAdd} {ManagementData.GetDialog(objectTaked.objectInfo.objectData.IDText, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())}", Color.green);
                 pickUpItem = true;
             }
         }
@@ -162,7 +162,7 @@ public class ManagementCharacterObjects : MonoBehaviour
                     objectForAdd.objectData = objectTaked.objectInfo.objectData;
                     int amountToAdd = ValidateAmountObjectToAdd(objectForAdd, objectTaked);
                     objectForAdd.amount = amountToAdd;
-                    character.characterInfo.managementCharacterHud.SendInformationMessage($"{ManagementData.GetDialog(12, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())} {amountToAdd} {ManagementData.GetDialog(objectTaked.objectInfo.objectData.IDText, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())}", Color.green);
+                    character.characterInfo.managementCharacterHud.SendInformationMessage($"{ManagementData.GetDialog(18, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())} {amountToAdd} {ManagementData.GetDialog(objectTaked.objectInfo.objectData.IDText, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())}", Color.green);
                     pickUpItem = true;
                 }
             }
@@ -180,7 +180,7 @@ public class ManagementCharacterObjects : MonoBehaviour
             }
             if (isFullInventory)
             {
-                character.characterInfo.managementCharacterHud.SendInformationMessage("Inventory full", Color.red);
+                character.characterInfo.managementCharacterHud.SendInformationMessage($"{ManagementData.GetDialog(19, ManagementData.saveData.configurationsInfo.currentLanguage.ToString())}", Color.red);
             }
         }
         else
