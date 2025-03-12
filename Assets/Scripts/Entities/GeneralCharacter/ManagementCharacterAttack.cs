@@ -85,7 +85,7 @@ public class ManagementCharacterAttack : MonoBehaviour, Character.ICharacterAtta
             instance.transform.position = character.characterInfo.characterAttack.GetDirectionAttack().transform.position;
             instance.transform.rotation = character.characterInfo.characterAttack.GetDirectionAttack().transform.rotation;
             instance.transform.localScale = Vector3.one;
-            character.characterInfo.PlayASound(CharacterSoundsScriptableObjec.TypeSound.Slash, false);
+            character.characterInfo.PlayASound(CharacterSoundsSO.TypeSound.Slash, false);
         }
     }
     void OnDrawGizmos()

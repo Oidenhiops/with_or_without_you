@@ -13,8 +13,6 @@ public class ManagementMapBlock : MonoBehaviour
     private Vector3 boxSize = new Vector3(0.25f, 0.25f, 0.25f);
     private Vector3 offsetPos = new Vector3(0, 0.5f, 0);
     [SerializeField] List<TypeDirections> directionsBlocks = new List<TypeDirections>();
-
-    // Booleans para activar direcciones espec�ficas
     public bool detectUp = false;
     public bool detectDown = false;
     public bool detectLeft = false;
@@ -41,14 +39,7 @@ public class ManagementMapBlock : MonoBehaviour
     private Vector3 back = new Vector3( 0, 0, -1);
     public bool drawGizmos;
     public int blockSelectedIndex;
-
-    private void Start()
-    {
-        
-    }
-
-    [NaughtyAttributes.Button]
-    public void DrawBlock()
+    [NaughtyAttributes.Button]  public void DrawBlock()
     {
         DetectInSpecifiedDirections();
     }
@@ -82,48 +73,6 @@ public class ManagementMapBlock : MonoBehaviour
             if (detectBackRigth) CheckDirection((back + right), TypeDirections.BackRight);
         }
         SetTextureFromAtlas(meshRenderer,GetTextureByDirection(), false);
-        DrawTextures();
-    }
-    void ValidateCanGeneratePath()
-    {
-
-    }
-    [NaughtyAttributes.Button]
-    void DrawTextures()
-    {
-        VariationsTextures variationsTextures = GetVariationsByTexture(blockInfo.textures[blockSelectedIndex].spriteFromAtlas);
-        if (variationsTextures != null)
-        {
-            if (transform.childCount > 0)
-            {
-                Destroy(transform.GetChild(0).gameObject);
-            }
-            Random.InitState(System.DateTime.Now.Millisecond);
-            float probability = Random.Range(0, 100);
-            meshRenderer.sharedMaterial = variationsTextures.atlasMaterialVariations;
-            List<Variations> variations = GetVariationsByProbability(variationsTextures.variations, probability);
-            int indexVariation = Random.Range(0, variations.Count);
-            Variations variation = variations[indexVariation];
-            SetTextureFromAtlas(meshRenderer, variation.sprite, false);
-            if (variation.needInstance)
-            {
-                GameObject instanceVariation = Instantiate(variation.instance, transform.position, Quaternion.identity, transform);
-                instanceVariation.transform.position += Vector3.up;
-                isWalkable = variations[indexVariation].isWalkable;
-                if (variation.needInstanceTexture)
-                {
-                    SetTextureFromAtlas(instanceVariation.GetComponent<MeshRenderer>(), variation.instanceSpriteFromAtlas, true);
-                }
-            }
-            else
-            {
-                isWalkable = true;
-            }
-        }
-        else
-        {
-            isWalkable = true;
-        }
     }
     void CheckDirection(Vector3 direction, TypeDirections directionBlock)
     {
@@ -164,18 +113,6 @@ public class ManagementMapBlock : MonoBehaviour
             }
         }
         return blockInfo.textures[0].spriteFromAtlas;
-    }    
-    public List<Variations> GetVariationsByProbability(Variations[] variationsTextures, float prob)
-    {
-        List<Variations> variationsList = new List<Variations>();
-        foreach(Variations variation in variationsTextures)
-        {
-            if (variation.probability >= prob)
-            {
-                variationsList.Add(variation);
-            }
-        }
-        return variationsList;
     }
     public Mesh GetMeshByTexture(Sprite mainTexture, bool isDecorationMesh)
     {

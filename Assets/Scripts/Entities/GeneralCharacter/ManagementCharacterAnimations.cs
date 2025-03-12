@@ -7,9 +7,9 @@ public class ManagementCharacterAnimations : MonoBehaviour, Character.ICharacter
     [SerializeField] GameObject characterSprite;
     [SerializeField] MeshRenderer meshRenderer;
     [SerializeField] Mesh originalMesh;
-    public CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo characterAnimationsInfo;
+    public CharacterAnimationsSO.CharacterAnimationsInfo characterAnimationsInfo;
     ManagementCharacterModelDirection.ICharacterDirection modelDirection;
-    public CharacterAnimationsInfoScriptableObject.AnimationsInfo currentAnimation;
+    public CharacterAnimationsSO.AnimationsInfo currentAnimation;
     [SerializeField] CharacterAnimationsEffectsInfo characterAnimationsEffectsInfo;
     void Awake()
     {
@@ -61,11 +61,11 @@ public class ManagementCharacterAnimations : MonoBehaviour, Character.ICharacter
             }
         }
     }
-    public void SetInitialData(InitialDataScriptableOject initialData)
+    public void SetInitialData(InitialDataSO initialData)
     {
         StopAllCoroutines();
         meshRenderer.material.SetTexture("_BaseTexture", initialData.atlas);
-        characterAnimationsInfo = new CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo
+        characterAnimationsInfo = new CharacterAnimationsSO.CharacterAnimationsInfo
         {
             animations = initialData.characterAnimations.animationsInfo.animations,
             baseSpritePerTime = initialData.characterAnimations.animationsInfo.baseSpritePerTime,
@@ -145,9 +145,9 @@ public class ManagementCharacterAnimations : MonoBehaviour, Character.ICharacter
     {
         return characterSprite;
     }
-    public CharacterAnimationsInfoScriptableObject.AnimationsInfo GetAnimation(TypeAnimation typeAnimation)
+    public CharacterAnimationsSO.AnimationsInfo GetAnimation(TypeAnimation typeAnimation)
     {
-        foreach (CharacterAnimationsInfoScriptableObject.AnimationsInfo animation in characterAnimationsInfo.animations)
+        foreach (CharacterAnimationsSO.AnimationsInfo animation in characterAnimationsInfo.animations)
         {
             if (animation.typeAnimation == typeAnimation)
             {
@@ -156,11 +156,11 @@ public class ManagementCharacterAnimations : MonoBehaviour, Character.ICharacter
         }
         return null;
     }
-    public CharacterAnimationsInfoScriptableObject.AnimationsInfo GetCurrentAnimation()
+    public CharacterAnimationsSO.AnimationsInfo GetCurrentAnimation()
     {
         return currentAnimation;
     }
-    public CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo GetAnimationsInfo()
+    public CharacterAnimationsSO.CharacterAnimationsInfo GetAnimationsInfo()
     {
         return characterAnimationsInfo;
     }
@@ -254,7 +254,7 @@ public class ManagementCharacterAnimations : MonoBehaviour, Character.ICharacter
                 }
                 else
                 {
-                    currentAnimation = new CharacterAnimationsInfoScriptableObject.AnimationsInfo();
+                    currentAnimation = new CharacterAnimationsSO.AnimationsInfo();
                 }
             }
             else
@@ -321,6 +321,6 @@ public class ManagementCharacterAnimations : MonoBehaviour, Character.ICharacter
     }
     public interface IAnimationInstance
     {
-        public void SetInfoForAnimation(Vector2 movement, CharacterAnimationsInfoScriptableObject.CharacterAnimationsInfo characterAnimationsInfo);
+        public void SetInfoForAnimation(Vector2 movement, CharacterAnimationsSO.CharacterAnimationsInfo characterAnimationsInfo);
     }
 }

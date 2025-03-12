@@ -191,11 +191,11 @@ public class ManagementCharacterObjects : MonoBehaviour
         }
         if (pickUpItem)
         {
-            character.characterInfo.PlayASound(CharacterSoundsScriptableObjec.TypeSound.PickUp, false);
+            character.characterInfo.PlayASound(CharacterSoundsSO.TypeSound.PickUp, false);
         }
         else
         {
-            character.characterInfo.PlayASound(CharacterSoundsScriptableObjec.TypeSound.NotPickup, false);
+            character.characterInfo.PlayASound(CharacterSoundsSO.TypeSound.NotPickup, false);
         }
         RefreshObjects();
         if (objectsForTake.Count > 0)

@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CharacterAnimations", menuName = "ScriptableObjects/CharacterAnimationsScriptableObject", order = 1)]
-public class CharacterAnimationsInfoScriptableObject : ScriptableObject
+[CreateAssetMenu(fileName = "CharacterAnimations", menuName = "ScriptableObjects/Character/CharacterAnimationsSO", order = 1)]
+public class CharacterAnimationsSO : ScriptableObject
 {
     public CharacterAnimationsInfo animationsInfo;
     [System.Serializable]

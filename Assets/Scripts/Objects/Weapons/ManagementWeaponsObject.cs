@@ -30,7 +30,7 @@ public class ManagementWeaponsObject : MonoBehaviour, ManagementObject.IObject
         armor.GetComponent<ManagementObject>().objectInfo.amount = 1;
         objectInfo.amount--;
         character.characterInfo.managementCharacterObjects.RefreshObjects();
-        character.characterInfo.PlayASound(character.characterInfo.managementCharacterSounds.GetAudioClip(CharacterSoundsScriptableObjec.TypeSound.PickUp), true);
+        character.characterInfo.PlayASound(character.characterInfo.managementCharacterSounds.GetAudioClip(CharacterSoundsSO.TypeSound.PickUp), true);
     }
 
     public void InitializeObject(Character character, ManagementCharacterObjects.ObjectsInfo objectInfo, ManagementCharacterObjects managementCharacterObjects)

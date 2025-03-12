@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class ManagementCharacterSounds : MonoBehaviour
 {
-    [NonSerialized] public CharacterSoundsScriptableObjec soundsInfo;
-    public AudioClip GetAudioClip(CharacterSoundsScriptableObjec.TypeSound typeSound)
+    [NonSerialized] public CharacterSoundsSO soundsInfo;
+    public AudioClip GetAudioClip(CharacterSoundsSO.TypeSound typeSound)
     {
-        CharacterSoundsScriptableObjec.SoundsInfo sounds = new CharacterSoundsScriptableObjec.SoundsInfo();
-        foreach (CharacterSoundsScriptableObjec.SoundsInfo sound in soundsInfo.sounds)
+        CharacterSoundsSO.SoundsInfo sounds = new CharacterSoundsSO.SoundsInfo();
+        foreach (CharacterSoundsSO.SoundsInfo sound in soundsInfo.sounds)
         {
             if (sound.typeSound == typeSound)
             {

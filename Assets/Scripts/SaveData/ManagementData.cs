@@ -52,7 +52,7 @@ public class ManagementData : MonoBehaviour
         CheckFileExistance(DataPath());
         saveDataInfo = ReadDataFromJson();
         saveData = saveDataInfo;
-        saveData.gameInfo.characterInfo.characterSelected = Resources.Load<InitialDataScriptableOject>($"SciptablesObjects/InitialData/{saveData.gameInfo.characterInfo.characterSelectedName}");
+        saveData.gameInfo.characterInfo.characterSelected = Resources.Load<InitialDataSO>($"SciptablesObjects/Character/InitialData/{saveData.gameInfo.characterInfo.characterSelectedName}");
         LoadCSV();
         SetResolutionData();
         SetAudioMixerData();
@@ -177,7 +177,7 @@ public class ManagementData : MonoBehaviour
     {
         public bool isInitialize = false;
         public string characterSelectedName;
-        public InitialDataScriptableOject characterSelected;
+        public InitialDataSO characterSelected;
         public ManagementCharacterSkills.SkillInfo[] currentSkills = new ManagementCharacterSkills.SkillInfo[4];
         public ManagementCharacterObjects.ObjectsInfo[] currentObjects = new ManagementCharacterObjects.ObjectsInfo[6];
     }
@@ -213,7 +213,7 @@ public class ManagementData : MonoBehaviour
     public enum TypeLanguage
     {
         English = 0,
-        Spanish = 1,
+        Español = 1,
         Frances = 2
     }
 }

@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class ChangeCharacterMenu : MonoBehaviour
 {
     public StaticticsUi[] staticticsUi;
-    public InitialDataScriptableOject characterSelected;
-    public InitialDataScriptableOject[] allCharacters;
+    public InitialDataSO characterSelected;
+    public InitialDataSO[] allCharacters;
     public TMP_Text nameCharacter;
     public int currentIndex = 0;
     public Character character;
@@ -20,7 +20,7 @@ public class ChangeCharacterMenu : MonoBehaviour
 
     public void OnEnable()
     {
-        allCharacters = Resources.LoadAll<InitialDataScriptableOject>("SciptablesObjects/InitialData");
+        allCharacters = Resources.LoadAll<InitialDataSO>("SciptablesObjects/Character/InitialData");
         characterSelected = ManagementData.saveData.gameInfo.characterInfo.characterSelected;
         ManagementData.saveData.gameInfo.characterInfo.currentSkills[0] = characterSelected.baseSkill;
         for (int i = 0; i < allCharacters.Length; i++)
