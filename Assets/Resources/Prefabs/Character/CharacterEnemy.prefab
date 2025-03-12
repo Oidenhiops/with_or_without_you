@@ -415,7 +415,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &3267473307002927260
 MonoBehaviour:
@@ -430,12 +430,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterInfo:
+    managementCharacterHud: {fileID: 0}
+    managementCharacterModelDirection: {fileID: 0}
+    managementCharacterSounds: {fileID: 0}
+    managementCharacterObjects: {fileID: 0}
+    managementCharacterSkills: {fileID: 0}
+    managementPlayerCamera: {fileID: 0}
+    characterObject: {fileID: 0}
+    dissolve: {fileID: 0}
+    owner: {fileID: 0}
     initialData: {fileID: 11400000, guid: fbcd7d4f710bf254a81b8d8d0fe93deb, type: 2}
     isPlayer: 0
     isInitialize: 0
     isActive: 0
     isPushed: 0
-    statistics2:
+    characterStatistics:
       _serializedList:
       - Key: 1
         Value:
@@ -526,12 +535,6 @@ MonoBehaviour:
           currentValue: 0
           maxValue: 0
     colorBlood: {r: 0.5188679, g: 0.03671235, b: 0.03671235, a: 1}
-  managementCharacterHud: {fileID: 0}
-  managementCharacterModelDirection: {fileID: 0}
-  managementCharacterSounds: {fileID: 8022874114501886702}
-  managementCharacterObjects: {fileID: 7985792512032563270}
-  managementCharacterSkills: {fileID: 0}
-  managementPlayerCamera: {fileID: 0}
 --- !u!114 &8441756717079699773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,6 +636,10 @@ MonoBehaviour:
       - sprite: {fileID: 0}
         amount: {fileID: 0}
         typeStatistic: 11
+    statusEffectsUi:
+      statusEffectContainer: {fileID: 0}
+      statusEffectsData:
+        _serializedList: []
     informationMessageUi:
       containerInformationMessage: {fileID: 0}
 --- !u!114 &8022874114501886702
@@ -778,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 3267473307002927260}
   posisionAttack: {fileID: 8850783917978919298}
+  distLostTarget: 1
 --- !u!114 &2849091386784508898
 MonoBehaviour:
   m_ObjectHideFlags: 0

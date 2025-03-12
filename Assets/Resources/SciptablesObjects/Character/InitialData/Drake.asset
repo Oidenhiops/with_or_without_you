@@ -97,7 +97,7 @@ MonoBehaviour:
       - Key: 9
         Value:
           typeStatistics: 9
-          baseValue: 3
+          baseValue: 3.2
           buffValue: 0
           objectValue: 0
           currentValue: 0

@@ -12,5 +12,6 @@
 11;OptionButton: BackButtonText;Back;Atrás;
 12;OptionButton: HomeButtonText;Home;Inicio;
 13;OptionButton: TitleResolutionMute;FullScreen;Pantalla Completa;
-14;SelectorCharacterButton: BackButton ;Back;Atrás;
-15;SelectorCharacterButton: PlayButton ;Play;Jugar;
+14;SelectorCharacterButton: BackButton;Back;Atrás;
+15;SelectorCharacterButton: PlayButton;Play;Jugar;
+16;NextDialog: NextDialogText;Press E to pass the text;Preciona E para pasar el texto;

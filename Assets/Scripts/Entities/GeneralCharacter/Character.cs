@@ -388,6 +388,9 @@ public class Character : MonoBehaviour
     {
         public void Move();
         public Rigidbody GetRigidbody();
+        public void SetPositionTarget(Transform position);
+        public void SetCanMoveState(bool state);
+        public void SetTarget(Transform targetPos);
     }
     public interface ICharacterAnimations
     {

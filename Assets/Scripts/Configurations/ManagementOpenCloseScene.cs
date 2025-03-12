@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,7 +9,7 @@ public class ManagementOpenCloseScene : MonoBehaviour
     public GameManager gameManager;
     public Animator openCloseSceneAnimator;
     [SerializeField] Image openCloseSceneLoader;
-    bool finishLoad = false;
+    [NonSerialized] public bool finishLoad = false;
     float currentLoad = 0;
     public bool auto = false;
     bool CantCharge = false;
@@ -62,12 +63,12 @@ public class ManagementOpenCloseScene : MonoBehaviour
     }
     public void FinishLoad()
     {
-        for (int i = 0; i < SceneManager.sceneCount; i++)
+        GameObject charFinded = GameObject.Find("CharacterPlayer");
+        if (charFinded != null)
         {
-            Character character = FindAnyObjectByType<Character>();
+            Character character = charFinded.GetComponent<Character>();
             character.characterInfo.isActive = true;
             character.GetComponent<Rigidbody>().isKinematic = false;
-            break;
         }
     }
     public enum TypeScene

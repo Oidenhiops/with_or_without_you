@@ -203,4 +203,8 @@ public class PathFollower : MonoBehaviour, Character.ICharacterMove
             Gizmos.DrawWireSphere(point + Vector3.up, 0.1f);
         }
     }
+
+    public void SetPositionTarget(Transform position){}
+    public void SetCanMoveState(bool state){}
+    public void SetTarget(Transform targetPos){}
 }

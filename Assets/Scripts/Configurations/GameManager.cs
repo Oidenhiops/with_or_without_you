@@ -10,26 +10,47 @@ public class GameManager : MonoBehaviour
     public void Start(){
         managementData.SetAudioMixerData();
     }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            bool canActivePause = true;
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                if (SceneManager.GetSceneAt(i).name == "HomeScene" || SceneManager.GetSceneAt(i).name == "OptionsScene")
+                {
+                    canActivePause = false;
+                }
+            }
+            if (!FindAnyObjectByType<ManagementOpenCloseScene>().finishLoad){
+                canActivePause = false;
+            }
+            if (canActivePause)
+            {
+                ChangeSceneSelector(TypeScene.OptionsScene);
+            }
+        }
+    }
     public void ChangeSceneSelector(TypeScene typeScene)
     {
         switch (typeScene)
         {
-            case TypeScene.HomeScene:
-                OpenCloseScene.openCloseSceneAnimator.Play("Out");
-                OpenCloseScene.openCloseSceneAnimator.SetBool("Out", true);
-                StartCoroutine(FadeOut());
-                StartCoroutine(ChangeScene(typeScene));
-                break;
             case TypeScene.OptionsScene:
                 SceneManager.LoadScene("OptionsScene", LoadSceneMode.Additive);
                 break;
-            case TypeScene.GameScene:
+            case TypeScene.Exit:
                 OpenCloseScene.openCloseSceneAnimator.Play("Out");
                 OpenCloseScene.openCloseSceneAnimator.SetBool("Out", true);
                 StartCoroutine(FadeOut());
                 StartCoroutine(ChangeScene(typeScene));
                 break;
-            case TypeScene.Exit:
+            case TypeScene.NextLevel:
+                OpenCloseScene.openCloseSceneAnimator.Play("Out");
+                OpenCloseScene.openCloseSceneAnimator.SetBool("Out", true);
+                StartCoroutine(FadeOut());
+                StartCoroutine(NextLevel());
+                break;
+            default:
                 OpenCloseScene.openCloseSceneAnimator.Play("Out");
                 OpenCloseScene.openCloseSceneAnimator.SetBool("Out", true);
                 StartCoroutine(FadeOut());
@@ -66,6 +87,21 @@ public class GameManager : MonoBehaviour
         else
         {
             Application.Quit();
+        }
+    }
+    public IEnumerator NextLevel()
+    {
+        Time.timeScale = 1;
+        yield return new WaitForSecondsRealtime(2);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
         }
     }
     public void EnterScene(){
@@ -109,6 +145,7 @@ public class GameManager : MonoBehaviour
         HomeScene = 0,
         OptionsScene = 1,
         GameScene = 2,
-        Exit = 3
+        Exit = 3,
+        NextLevel = 4
     }
 }
