@@ -29,6 +29,12 @@ public class Character : MonoBehaviour
     {
         InitializeCharacter();
     }
+    [NaughtyAttributes.Button]
+    void ActivePlayer()
+    {
+        characterInfo.characterMove.GetRigidbody().isKinematic = false;
+        characterInfo.isActive = true;
+    }
     void Update()
     {
         if (characterInfo.isInitialize) HandleHud();

@@ -3582,8 +3582,8 @@ MonoBehaviour:
     characterObject: {fileID: 0}
     dissolve: {fileID: 0}
     owner: {fileID: 0}
-    initialData: {fileID: 11400000, guid: fbcd7d4f710bf254a81b8d8d0fe93deb, type: 2}
-    isPlayer: 0
+    initialData: {fileID: 11400000, guid: a81b68bccdb2c0f48a76a3302331d7f3, type: 2}
+    isPlayer: 1
     isInitialize: 0
     isActive: 0
     isPushed: 0
