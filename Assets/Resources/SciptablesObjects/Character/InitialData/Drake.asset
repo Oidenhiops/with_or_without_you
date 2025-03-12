@@ -65,7 +65,7 @@ MonoBehaviour:
       - Key: 5
         Value:
           typeStatistics: 5
-          baseValue: 0.5
+          baseValue: 1
           buffValue: 0
           objectValue: 0
           currentValue: 0

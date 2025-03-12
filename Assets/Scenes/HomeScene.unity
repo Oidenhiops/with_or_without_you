@@ -4587,10 +4587,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <waitfor=1>{fade d=10}<wave>Title game
+  m_text: With Or Without You
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc3e3e57aff9f4241ade77e9ef1b6654, type: 2}
+  m_sharedMaterial: {fileID: -1437753104216512249, guid: dc3e3e57aff9f4241ade77e9ef1b6654,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4614,8 +4615,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
-  m_fontSizeBase: 120
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4681,19 +4682,19 @@ MonoBehaviour:
   typewriterStartsAutomatically: 0
   animationLoop: 0
   timeScale: 0
-  _text: 
+  _text: With Or Without You
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
   useDefaultDatabases: 1
-  databaseBehaviors: {fileID: 0}
-  databaseAppearances: {fileID: 0}
-  databaseActions: {fileID: 0}
-  defaultAppearancesTags:
-  - size
-  defaultDisappearancesTags:
-  - fade
-  defaultBehaviorsTags: []
+  databaseBehaviors: {fileID: 11400000, guid: 326c5987eeff9c046bef94e571b6dfe8, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: db6ff039adca6f647a2b0ff536784c04,
+    type: 2}
+  databaseActions: {fileID: 11400000, guid: ef210a2e290ff394eb2c8195e6e67752, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags: []
+  defaultBehaviorsTags:
+  - shake
   defaultTagsMode: 0
 --- !u!1 &1024599738
 GameObject:

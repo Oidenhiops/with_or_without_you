@@ -45,15 +45,13 @@ MonoBehaviour:
       - {fileID: 268766949, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -109199194, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 238459693, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: 1643737418, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       spritesUp:
+      - {fileID: 1643737418, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 1223081657, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -2022978215, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 2086614713, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -160571069, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1733539933, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: 532081291, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -265361999, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       animationsEffects: 
       needAnimationEnd: 0
       loop: 1
@@ -96,24 +94,20 @@ MonoBehaviour:
       - {fileID: 2099936020, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 925568151, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 1662893799, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
+      spritesUp:
       - {fileID: 320895553, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1120884534, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      spritesUp:
       - {fileID: -1251189842, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -392444859, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1850388977, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 897412450, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1590702407, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -1259286443, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: 838719837, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -585012727, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -1386692479, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       animationsEffects: 
       needAnimationEnd: 1
       loop: 0
       needInstance: 0
       needFrameToInstance: 0
-      frameToInstance: 6
+      frameToInstance: 5
       speedSpritesPerTimeMultplier: 1
       instanceObj: {fileID: 8556195570774308549, guid: f98edab0006817e4e9c48bd4f4a3fffd,
         type: 3}
@@ -127,24 +121,20 @@ MonoBehaviour:
       - {fileID: 2099936020, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 925568151, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 1662893799, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
+      spritesUp:
       - {fileID: 320895553, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1120884534, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      spritesUp:
       - {fileID: -1251189842, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -392444859, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1850388977, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: 897412450, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       - {fileID: -1590702407, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -1259286443, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: 838719837, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -585012727, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
-      - {fileID: -1386692479, guid: 2c04e885bc397ea449f8d22e995a55a5, type: 3}
       animationsEffects: 
       needAnimationEnd: 1
       loop: 0
       needInstance: 0
       needFrameToInstance: 0
-      frameToInstance: 6
+      frameToInstance: 5
       speedSpritesPerTimeMultplier: 1
       instanceObj: {fileID: 0}
       instance: {fileID: 0}
